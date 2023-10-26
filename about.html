@@ -19,12 +19,29 @@
 
             <h2>Bio</h2>
             <picture>
-                <source media="(min-width:650px)" srcset="images/self.jpg">
-                <source media="(min-width:465px)" srcset="images/self.jpg">
-                <img src="images/self.jpg" alt="photo of Austin" style="width:auto;">
+                <!-- <source media="(min-width:200px)" srcset="images/self.jpg">
+                <source media="(min-width:100px)" srcset="images/self.jpg"> -->
+                <source srcset="images/self.jpg" width="10%">
+                <source srcset="images/self.png" width="10%">
+                <img src="images/self.gif" alt="photo of Austin" width="10%">
             </picture>
-            <h2>Contact Me</h2>
-            <input>
+            <!-- add video here -->
+            <h2>Send Me a Message</h2>
+            <!-- include form with input, textarea, fieldset, legend, label, optgroup, option -->
+            <!-- details and summary tag go together -->
+            <form action="form.php">
+                <fieldset>
+                    <legend>Form</legend>
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="msg" rows="4" cols="50"></textarea><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
         </main>
 
         <footer>
