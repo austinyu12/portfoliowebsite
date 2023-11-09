@@ -29,10 +29,12 @@ p {
 }
 
 .title {
-    padding: 80px;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 50%;
     align-items: flex-end;
     background-color: gray;
-    height: 60dvh;
+    height: 80dvh;
 }
 
 .wrapper {
@@ -62,17 +64,14 @@ p {
 header {
     background-color: var(--color, red);
     padding: 2.0rem;
-    height: 4dvh;
-    /* vertical-align: center; */
 }
 
 nav > * {
     font: 2.0rem Helvetica;
     vertical-align: center;
-    border-radius: 4px;
-    margin-left: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 4px 12px;
 }
 
 .details > * {
