@@ -1,5 +1,6 @@
 :root {
-    --color: #5a1120;
+    --color: #504b43;
+    --background-color: #DFF2D8;
     font-size: 62.5%;
 }
 
@@ -8,23 +9,28 @@ body {
 }
 
 h1 {
-    color: var(--color, red);
-    /* font-family: 64px Helvetica, 64px Arial, sans-serif; */
+    color: black;
     font: 6.4rem Helvetica;
 }
 
 h2 {
-    color: var(--color, red);
+    color: black;
     font: 3.2rem Helvetica;
 }
 
 h3 {
-    color: var(--color, red);
+    color: black;
     font: 2.0rem Helvetica;
     font-weight: bold;
 }
 
 p {
+    color: black;
+    font: 1.6rem Helvetica;
+}
+
+a {
+    color: black;
     font: 1.6rem Helvetica;
 }
 
@@ -33,11 +39,14 @@ p {
     padding-left: 10%;
     padding-right: 50%;
     align-items: flex-end;
-    background-color: gray;
     height: 80dvh;
 }
 
-.wrapper {
+#projects {
+    background-color: var(--background-color, tan);
+}
+
+.project {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 80px 200px;
@@ -51,7 +60,7 @@ p {
 }
 
 .preview {
-    background-color: var(--color, red);
+    background-color: var(--color, gray);
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
@@ -62,7 +71,7 @@ p {
 }
 
 header {
-    background-color: var(--color, red);
+    background-color: var(--color, gray);
     padding: 2.0rem;
 }
 
@@ -90,3 +99,41 @@ footer > * {
     margin-right: 40px;
 }
 
+#about {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    /* grid-auto-flow: column; */
+    padding: 80px 200px;
+    gap: 20px;
+}
+
+#bio {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+#myintro {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-self: flex-end;
+}
+
+#self img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    align-self: center;
+}
+
+.showproject {
+    font: 2.0rem Helvetica;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+#myintro {
+    padding: 20px;
+}
