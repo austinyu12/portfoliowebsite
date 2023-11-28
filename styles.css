@@ -206,6 +206,33 @@ li {
     padding: 0 10%;
 }
 
+#commentform {
+    display: grid;
+    grid-template-rows: 10rem 10rem 10rem 10rem;
+}
+
+.inputfield {
+    display: grid;
+    grid-template-rows: 2rem 4rem;
+    margin: 0 20%;
+}
+
+#formsubmit {
+    margin: auto;
+    width: 10%;
+    height: 50%;
+}
+
+legend {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
 @media (color-gamut: srgb) {
     #titletext {
         background: #DFF2D8;

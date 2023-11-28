@@ -39,58 +39,31 @@
                 </p>
             </section>
 
-            <!-- <h2>Send Me a Message</h2>
-            <form action="form.php">
-                <fieldset>
+            <h2>Send Me a Message</h2>
+            <form action="https://httpbin.org" method="get">
+                <fieldset id="commentform">
                     <legend>Form</legend>
 
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname"><br><br>
+                    <section class="inputfield">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </section>
+                    
+                    <section class="inputfield">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                    </section>
 
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname"><br><br> 
+                    <section class="inputfield">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                    </section>
 
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select><br><br>
+                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
 
-                    <label for="year">Year:</label>
-                    <select id="year" name="year">
-                        <optgroup label="Normal">
-                            <option value="first">First</option>
-                            <option value="second">Second</option>
-                            <option value="third">Third</option>
-                            <option value="fourth">Fourth</option>
-                        </optgroup>
-                        <label for="Year">Year:</label>
-                        <optgroup label="Transfer">
-                            <option value="firsttransfer">First</option>
-                            <option value="secondtransfer">Second</option>
-                        </optgroup>
-                    </select><br><br>
-
-                    <label for="college">College:</label>
-                    <input list="colleges" name="college" id="college">
-                    <datalist id="colleges">
-                        <option value="Revelle">
-                        <option value="Muir">
-                        <option value="Marshall">
-                        <option value="Warren">
-                        <option value="ERC">
-                        <option value="Sixth">
-                        <option value="Seventh">
-                        <option value="Eighth">
-                    </datalist><br><br>
-
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="msg" rows="4" cols="50"></textarea><br><br>
-
-                    <input type="submit" value="Submit">
+                    <input type="submit" id="formsubmit" value="Submit">
                 </fieldset>
-            </form> -->
+            </form>
         </main>
 
         <footer>
