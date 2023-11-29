@@ -15,10 +15,6 @@
                 <button onclick="window.location.href='index.html';">Home</button>
                 <button onclick="window.location.href='about.html';">About</button>
                 <button onclick="window.location.href='resume.html';">Resume</button>
-                <label class="switch">
-                    <input type="checkbox" id="modeSwitch" onclick="toggleTheme()">
-                    <span class="slider"></span>
-                </label>
             </nav>
         </header>
 
@@ -44,14 +40,14 @@
             </section>
 
             <h2>Send Me a Message</h2>
-            <form action="https://httpbin.org/post" method="post">
+            <form action="https://httpbin.org" method="get">
                 <fieldset id="commentform">
-                    <legend>Form</legend>
+                    <legend>Form (No JS)</legend>
 
                     <section class="inputfield">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" 
-                        placeholder="Your Name" pattern="[a-zA-Z0-9\s.,!?';:@]+" onblur="validateName()" required>
+                        placeholder="Your Name" pattern="[a-zA-Z0-9\s.,!?';:@]+" required>
                     </section>
                     
                     <section class="inputfield">
@@ -73,28 +69,6 @@
                     <input type="submit" id="formsubmit" value="Submit">
                 </fieldset>
             </form>
-
-            <script>
-                var username = document.getElementById('name');
-                var email = document.getElementById('email');
-                var comments = document.getElementById('comments');
-
-                //runs everytime there is input
-                //compares input to the pattern, returns if true, false if not
-                //if false, give alert
-
-                email.addEventListener('input', validateEmail);
-                //comments.addEventListener('input', validInput(input));
-
-                function validateEmail() {
-                    if (email.checkValidity()) {
-                        console.log('valid input');
-                    }
-                    else {
-                        console.log('invalid input');
-                    }
-                }
-            </script>
         </main>
 
         <footer>
@@ -102,7 +76,6 @@
             <p>auustin.yuu@gmail.com</p>
             <a href="https://www.linkedin.com/in/austinyu12" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </footer>
-        <script src="script.js"></script>
     </body>
 
 </html>

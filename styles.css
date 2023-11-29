@@ -1,8 +1,18 @@
 :root {
-    --color: #504b43;
-    --background-color: #DFF2D8;
+    --complementary-color: #DFF2D8;
+    --header-color: #504b43;
+
+    --text-color-light: black;
+    --background-color-light: white;
+    --text-color-dark: white;
+    --background-color-dark:#28282B;
     font-size: 62.5%;
 }
+
+/* html {
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+} */
 
 @font-face {
     font-family: "Brix";
@@ -16,28 +26,28 @@ body {
 }
 
 h1 {
-    color: black;
+    color: --text-color-light;
     font: 6.4rem Helvetica;
 }
 
 h2 {
-    color: black;
+    color: --text-color-light;
     font: 3.2rem Helvetica;
 }
 
 h3 {
-    color: black;
+    color: --text-color-light;
     font: 2.0rem Helvetica;
     font-weight: bold;
 }
 
 p {
-    color: black;
+    color: --text-color-light;
     font: 1.6rem Helvetica;
 }
 
 a {
-    color: black;
+    color: --text-color-light;
     font: 1.6rem Helvetica;
 }
 
@@ -50,7 +60,7 @@ a {
 }
 
 #projects {
-    background-color: var(--background-color, tan);
+    background-color: var(--complementary-color, tan);
 }
 
 .project {
@@ -72,7 +82,7 @@ a {
 }
 
 .preview {
-    background-color: var(--color, gray);
+    background-color: var(--header-color, gray);
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     width: 100%;
@@ -88,7 +98,7 @@ a {
 }
 
 header {
-    background-color: var(--color, gray);
+    background-color: var(--header-color, gray);
     padding: 2.0rem;
 }
 
@@ -214,7 +224,7 @@ li {
 .inputfield {
     display: grid;
     grid-template-rows: 2rem 4rem;
-    margin: 0 20%;
+    margin: 0 40%;
 }
 
 #formsubmit {
@@ -233,6 +243,50 @@ label {
     font-weight: bold;
 }
 
+input:invalid {
+    border: 2px solid red; 
+}
+
+textarea:invalid {
+    border: 2px solid red;
+}
+
+.switch {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    display: inline-block;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
 @media (color-gamut: srgb) {
     #titletext {
         background: #DFF2D8;
@@ -240,7 +294,6 @@ label {
 }
 
 #indexintro {
-    color: color(srgb 0 0 0);
     animation-name: flashing;
     animation-duration: 4s;
     animation-iteration-count: infinite;
