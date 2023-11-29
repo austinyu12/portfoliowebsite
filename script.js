@@ -30,30 +30,18 @@ var username = document.getElementById('name');
 var email = document.getElementById('email');
 var comments = document.getElementById('comments');
 
-email.addEventListener('input', validateEmail);
-//comments.addEventListener('input', validInput(input));
+// email.addEventListener('input', validateInput);
 
-// function validateName() {
-//     //console.log('validating name');
-//     if (username.checkValidity()) {
-//         console.log('Input is valid');
-//         myInput.setCustomValidity();
-//     }
-//     else {
-//         username.setCustomValidity('Must enter a name');
-//     }
-//     username.reportValidity();
-// }
+function validateInput(inputElement) {
+    var inputValue = inputElement.value;
+    var validPattern = /[a-zA-Z0-9\s.,!?';:@]+/;
+    console.log('running');
 
-function validateEmail() {
-    if (email.checkValidity()) {
-        console.log('valid input');
-    }
-    else {
+    if (!validPattern.test(inputValue)) {
+        // inputElement.value = inputValue.replace(/[a-zA-Z0-9\s.,!?';:@]+/g, '');
+        //inputElement.preventDefault();
+        this.setCustomValidity('You are inputting an invalid character.');
         console.log('invalid input');
     }
 }
 
-// function validComment(input) {
-
-// }

@@ -51,13 +51,23 @@
                     <section class="inputfield">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" 
-                        placeholder="Your Name" pattern="[a-zA-Z0-9\s.,!?';:@]+" onblur="validateName()" required>
+                        placeholder="Your Name" pattern="[a-zA-Z0-9\s.,!?';:@]+" 
+                        oninvalid="setCustomValidity('Must input a name.')" oninput="setCustomValidity(''); validateInput(this)" required>
+                        <section class="messagearea">
+                            <div class="errormessagearea"></div>
+                            <div class="infomessagearea"></div>
+                        </section>
                     </section>
                     
                     <section class="inputfield">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email"
-                        placeholder="you@email.com" pattern="[a-zA-Z0-9\s.,!?';:@]+" required>
+                        placeholder="you@email.com" pattern="[a-zA-Z0-9\s.,!?';:@]+" 
+                        oninvalid="setCustomValidity('Must input a valid email.')" oninput="setCustomValidity(''); validateInput(this)" required>
+                        <section class="messagearea">
+                            <div class="errormessagearea"></div>
+                            <div class="infomessagearea"></div>
+                        </section>
                     </section>
 
                     <section class="inputfield">
@@ -65,7 +75,13 @@
                         <textarea id="comments" name="comments" rows="6" cols="50"
                          minlength="10" maxlength="200" 
                          placeholder="Your message here. (min 10 chars, max 200 chars)" 
-                         pattern="[a-zA-Z0-9\s.,!?';:@]+" required></textarea>
+                         pattern="[a-zA-Z0-9\s.,!?';:@]+" 
+                         oninvalid="setCustomValidity('Your message is not a valid length.')" 
+                         oninput="setCustomValidity(''); validateInput(this)" required></textarea>
+                         <section class="messagearea">
+                            <div class="errormessagearea"></div>
+                            <div class="infomessagearea"></div>
+                        </section>
                     </section>
 
                     <input type="hidden" id="possible_bot" name="possible_bot" value="true">
@@ -73,28 +89,6 @@
                     <input type="submit" id="formsubmit" value="Submit">
                 </fieldset>
             </form>
-
-            <script>
-                var username = document.getElementById('name');
-                var email = document.getElementById('email');
-                var comments = document.getElementById('comments');
-
-                //runs everytime there is input
-                //compares input to the pattern, returns if true, false if not
-                //if false, give alert
-
-                email.addEventListener('input', validateEmail);
-                //comments.addEventListener('input', validInput(input));
-
-                function validateEmail() {
-                    if (email.checkValidity()) {
-                        console.log('valid input');
-                    }
-                    else {
-                        console.log('invalid input');
-                    }
-                }
-            </script>
         </main>
 
         <footer>
